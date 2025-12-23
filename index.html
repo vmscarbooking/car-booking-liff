@@ -8,7 +8,7 @@
 <body>
 <script>
 async function main() {
-  await liff.init({ liffId: "LIFF_ID_ใส่ทีหลัง" });
+  await liff.init({ liffId: "2008751913-aY6rCzKd" });
 
   if (!liff.isLoggedIn()) {
     liff.login();
@@ -19,7 +19,7 @@ async function main() {
   const uid = profile.userId;
 
   const appUrl =
-    "https://script.google.com/macros/s/XXXXXXXX/exec?openApp=1&uid=" + uid;
+    "https://script.google.com/macros/s/AKfycbzwLV-c4Hyn6odhgh88aSbjHRlyNE9pa_SuPOD_qNp_ONPV4kv3YzcRilbJ5Wf5I-O_hg/exec" + uid;
 
   window.location.replace(appUrl);
 }
