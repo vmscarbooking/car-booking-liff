@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>LIFF Redirect</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+<script>
+async function main() {
+  await liff.init({ liffId: "LIFF_ID_ใส่ทีหลัง" });
+
+  if (!liff.isLoggedIn()) {
+    liff.login();
+    return;
+  }
+
+  const profile = await liff.getProfile();
+  const uid = profile.userId;
+
+  const appUrl =
+    "https://script.google.com/macros/s/XXXXXXXX/exec?openApp=1&uid=" + uid;
+
+  window.location.replace(appUrl);
+}
+main();
+</script>
+</body>
+</html>
